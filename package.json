@@ -1,16 +1,14 @@
 {
   "name": "planner",
   "version": "1.0.0",
+  "private": true,
   "description": "Full-stack разработка Trello 2.0 | RED PLANNER [Next.js 14 / React / Nest / TypeScript / Prisma]",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kirzyka/planner.git"
   },
   "keywords": [
+    "nestjs",
     "nextjs",
     "js",
     "javascript",
@@ -24,5 +22,13 @@
     "url": "https://github.com/kirzyka/nplanner/issues"
   },
   "homepage": "https://github.com/kirzyka/planner#readme",
-  "dependencies": {}
+  "workspaces": {
+    "packages": [
+      "planner-be",
+      "planner-fe"
+    ],
+    "nohoist": [
+      "**/@types"
+    ]
+  }
 }
