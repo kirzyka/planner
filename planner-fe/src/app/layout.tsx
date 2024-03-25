@@ -1,4 +1,3 @@
-import { Providers } from './providers'
 import type { Metadata } from 'next'
 import { Noto_Sans } from 'next/font/google'
 import { Toaster } from 'sonner'
@@ -6,6 +5,7 @@ import { Toaster } from 'sonner'
 import { SITE_NAME } from '@/constants/seo.constants'
 
 import './globals.scss'
+import { Providers } from './providers'
 
 const zen = Noto_Sans({
 	subsets: ['cyrillic', 'latin'],
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 		default: SITE_NAME,
 		template: `%s | ${SITE_NAME}`
 	},
-	description: 'Best tool for planning'
+	description: 'Best one for planning from RED GROUP [htmllessons.ru]'
 }
 
 export default function RootLayout({
@@ -33,6 +33,7 @@ export default function RootLayout({
 			<body className={zen.className}>
 				<Providers>
 					{children}
+
 					<Toaster
 						theme='dark'
 						position='bottom-right'
